@@ -1,0 +1,1 @@
+A Apache Spark DStream to poll from any HTTP location
