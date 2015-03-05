@@ -13,7 +13,8 @@ object SparkDstreamHttp extends Build {
     libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.0.13",
     libraryDependencies += "com.typesafe" %% "scalalogging-slf4j" % "1.0.1",
     libraryDependencies += "org.apache.spark" %% "spark-core" % "1.2.1",
-    libraryDependencies += "org.apache.spark" %% "spark-streaming" % "1.2.1"
+    libraryDependencies += "org.apache.spark" %% "spark-streaming" % "1.2.1",
+    libraryDependencies += "org.apache.httpcomponents" % "httpclient" % "4.4"
   )
 
   lazy val testDependencies: Seq[Setting[_]] = Seq(
