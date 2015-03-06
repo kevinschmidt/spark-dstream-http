@@ -21,7 +21,8 @@ object SparkDstreamHttp extends Build {
     libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.10.1" % "test,it",
     libraryDependencies += "org.mockito" % "mockito-all" % "1.9.5" % "test,it",
     libraryDependencies += "org.specs2" %% "specs2" % "2.3.8" % "test,it",
-    libraryDependencies += "junit" % "junit" % "4.11" % "test,it"
+    libraryDependencies += "junit" % "junit" % "4.11" % "test,it",
+    libraryDependencies += "com.github.simplyscala" %% "simplyscala-server" % "0.5"
   )
 
   lazy val formattingSettings = FormattingPreferences()

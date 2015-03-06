@@ -48,12 +48,8 @@ class HttpReceiver(
   def onStart() {
     logInfo("Starting HTTP Input Stream")
     httpClient = HttpClients.createDefault()
-    try {
-      scheduledExecutorPool = Executors.newScheduledThreadPool(1, Utils.namedThreadFactory("HttpInputHandler"))
-      scheduledExecutorPool.scheduleAtFixedRate(new HttpHandler(url), interval.toMillis, interval.toMillis, TimeUnit.MILLISECONDS)
-    } finally {
-      scheduledExecutorPool.shutdown()
-    }
+    scheduledExecutorPool = Executors.newScheduledThreadPool(1, Utils.namedThreadFactory("HttpInputHandler"))
+    scheduledExecutorPool.scheduleAtFixedRate(new HttpHandler(url), interval.toMillis, interval.toMillis, TimeUnit.MILLISECONDS)
   }
 
   private class HttpHandler(uri: URI) extends Runnable {
